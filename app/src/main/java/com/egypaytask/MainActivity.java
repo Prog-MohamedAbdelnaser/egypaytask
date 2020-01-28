@@ -222,7 +222,7 @@ public class MainActivity extends AppCompatActivity {
         DatePickerDialog.OnDateSetListener date = (view1, year, monthOfYear, dayOfMonth) -> {
             view.setText(year+"-"+monthOfYear+"-"+dayOfMonth);
             viewItem.setValue(year+"-"+monthOfYear+"-"+dayOfMonth+"");
-
+            isShown =false;
             viewValuesHashMap.put(id.toString(),viewItem);
         };
         final Calendar myCalendar = Calendar.getInstance();
@@ -236,7 +236,7 @@ public class MainActivity extends AppCompatActivity {
                         .get(Calendar.YEAR), myCalendar.get(Calendar.MONTH),
                         myCalendar.get(Calendar.DAY_OF_MONTH)).show();
                 isShown =true;
-            }else isShown =false;
+            };
 
 
 
